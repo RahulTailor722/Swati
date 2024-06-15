@@ -590,6 +590,10 @@ footer .footer-list a:hover::after{
   /* position: relative; */
   height: 100% !important;
 }
+.poject-details img{
+  width: 100%;
+  object-fit: cover;
+}
 .project-listing .projects {
   position: relative;
 }
