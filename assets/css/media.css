@@ -1,0 +1,770 @@
+@media (max-width:1299.98px){
+  .project-slider .slick-dots {
+    bottom: 10%; 
+  }
+}
+@media (max-width: 1199.98px) {
+  .p-100 {
+    padding: 90px;
+  }
+  .project-sub-image .project-content {
+  padding: 20px 20px 20px;
+  }
+  .sub-pro-img img{
+    height: 500px !important;
+    width: 100%;
+  }
+  .project-slider .slick-dots {
+    bottom: 8%; 
+  }
+}
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .project-slider .slick-dots {
+    bottom: 5%; 
+  }
+  .dropdown .dropdown-menu {
+    display: block;
+    background-color: transparent;
+    border: none !important;
+    padding: 0;
+    padding-left: 50px;
+  }
+  .p-100 {
+    padding: 60px;
+  }
+  .ft-connetct {
+    margin-bottom: 15px;
+  }
+  .project-btns {
+    margin-top: 25px;
+  }
+  .project-btns a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .g-20 {
+    gap: 15px;
+  }
+  .g-21 {
+    gap: 16px;
+  }
+  .g-30 {
+    gap: 20px;
+  }
+  .g-40 {
+    gap: 30px;
+  }
+  .g-50 {
+    gap: 40px;
+  }
+  .g-60 {
+    gap: 50px;
+  }
+  .py-20,
+  .py-25 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .px-20,
+  .px-24 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .px-40 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .px-100 {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .my-30 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .my-50 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .my-60 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .mb-12 {
+    margin-bottom: 12px;
+  }
+  .mb-15 {
+    margin-bottom: 15px;
+  }
+  .mb-16 {
+    margin-bottom: 16px;
+  }
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  .mb-25 {
+    margin-bottom: 20px;
+  }
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+  .mb-32 {
+    margin-bottom: 30px;
+  }
+  .mb-50 {
+    margin-bottom: 40px;
+  }
+  .mb-60 {
+    margin-bottom: 50px;
+  }
+  .mb-64 {
+    margin-bottom: 60px;
+  }
+  .p-15 {
+    padding: 15px;
+  }
+  .p-20 {
+    padding: 20px;
+  }
+  .p-30 {
+    padding: 30px;
+  }
+  .p-36 {
+    padding: 30px;
+  }
+  .p-40 {
+    padding: 30px;
+  }
+  .p-50 {
+    padding: 40px;
+  }
+  .py-30,
+  .py-33 {
+    padding: 30px 0px;
+  }
+  .pb-50 {
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6,
+  button,
+  p {
+    font-size: 16px;
+  }
+  .buttons {
+    font-size: 14px;
+  }
+  .project-image {
+    height: 600px;
+  }
+  .offcanvas-start {
+    padding: 50px;
+  }
+  .map-location {
+    height: 361px;
+  }
+  .img-blog {
+    height: 220px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .img-blog img {
+    height: 100%;
+    width: 100%;
+  }
+  .populer-blog-img {
+    margin: 20px 0px;
+  }
+  .center-line {
+    border-left: 1px solid #888888;
+    border-right: none;
+    height: 100%;
+    width: 0.1%;
+    margin: auto;
+  }
+  .about-banner {
+    height: 100%;
+}
+.project-inner-details .rera-carpet{
+  width: 100%;
+}
+}
+
+@media (max-width: 767.98px) {
+  .index-nav#header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+  .index-nav #centerlogo {
+  opacity: 0;
+}
+.index-nav.sticky #centerlogo {
+  opacity: 1;
+  transition: all 0.5s ea;
+}
+  .index-nav .white-call, .index-nav .white-bar{
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+.index-nav.sticky .white-call, .index-nav.sticky .white-bar{
+  display: none;
+}
+.index-nav.sticky .black-call, .index-nav.sticky .black-bar{
+  display: block;
+}
+.index-nav .black-call, .index-nav .black-bar{
+  display: none;
+}
+  .contat-social {
+    width: 100%;
+    justify-content: space-between;
+    margin: 20px auto 0;
+  }
+  .accordion-header button {
+    width: 100%;
+  }
+  .apply-btn {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .apply-btn a {
+    padding: 10px 0;
+    display: block;
+  }
+  .accordion-body p {
+    margin-bottom: 10px;
+  }
+  .blog-ft-social {
+    width: fit-content;
+    margin: auto;
+  }
+  .stats {
+    text-align: left;
+    padding: 20px 0px;
+    border: 0;
+    border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+  }
+  .nav-hide {
+    display: none;
+  }
+  .p-100 {
+    padding: 30px 16px;
+  }
+
+  .ft-end-social {
+    margin-top: 15px;
+  }
+  .footer-social {
+    width: fit-content;
+    margin: auto;
+  }
+  .project-image {
+    height: 500px;
+  }
+  .location-icons {
+    margin-top: 15px;
+  }
+  .small-video,
+  .big-video {
+    height: 320px;
+  }
+  .g-15 {
+    gap: 10px;
+  }
+  .g-16 {
+    gap: 15px;
+  }
+  .g-20 {
+    gap: 15px;
+  }
+  .g-21 {
+    gap: 15px;
+  }
+  .g-30 {
+    gap: 20px;
+  }
+  .g-40 {
+    gap: 20px;
+  }
+  .g-50 {
+    gap: 30px;
+  }
+  .g-60 {
+    gap: 40px;
+  }
+  .py-20,
+  .py-25 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .px-20,
+  .px-24 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .px-40 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .px-100 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .my-30 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .my-50,
+  .my-60 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .mb-12,
+  .mb-15,
+  .mb-16 {
+    margin-bottom: 12px;
+  }
+  .mb-20,
+  .mb-25 {
+    margin-bottom: 15px;
+  }
+  .mb-30,
+  .mb-32 {
+    margin-bottom: 15px;
+  }
+  .mb-50,
+  .mb-60,
+  .mb-64 {
+    margin-bottom: 40px;
+  }
+  .p-15,
+  .p-20 {
+    padding: 15px;
+  }
+  .p-30,
+  .p-36,
+  .p-40 {
+    padding: 20px;
+  }
+  .p-50 {
+    padding: 30px;
+  }
+  .py-30,
+  .py-33 {
+    padding: 20px 0px;
+  }
+  .pb-50 {
+    padding-bottom: 30px;
+  }
+  .logo img {
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6,
+  button,
+  p {
+    font-size: 14px;
+  }
+  .buttons {
+    font-size: 14px;
+  }
+  .project-image {
+    height: 400px;
+  }
+  .offcanvas-start {
+    padding: 40px;
+  }
+  .mb-28 {
+    margin-bottom: 20px;
+  }
+
+  .project-slider {
+    width: 94%;
+    overflow: hidden;
+  }
+  .project-slider .test {
+    height: 300px;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .vline {
+    display: none;
+  }
+  .bottom-fix,
+  .bottom-fix .py-30 {
+    padding: 0 !important;
+  }
+
+  .rera-carpet {
+    margin-top: 0px;
+  }
+  .team-image {
+    margin-bottom: 20px;
+  }
+  .team-social {
+    margin-top: 20px;
+  }
+  .team-mt-30 {
+    margin-top: 30px;
+  }
+  .get-icon {
+    height: unset;
+    width: unset;
+  }
+
+  .mtt-60 {
+    margin-top: 60px;
+  }
+  .project-slider .slick-slide {
+    width: 100% !important;
+  }
+  .borders {
+    width: 95%;
+  }
+  h5 span i {
+    font-size: 20px !important;
+  }
+  .project-content {
+    padding: 20px 0;
+  }
+  .social-portion img {
+    margin: 70px 0px 90px;
+  }
+  
+  #navbar{
+    background: none;
+  }
+  #footer{
+    margin-top: 20px;
+  }
+  .project-sub-image .project-content {
+  padding: 10px 0px;
+  }
+   .p-00 {
+    padding: 0 !important;
+  }
+  .rera-carpet-two{
+    margin-top: 15px;
+  }
+  .offcanvas.show{
+    width: 100%;
+  }
+  .mt-60 {
+    margin-top: 10px;
+}
+    .about-banner {
+        height: 430px;
+    }
+    .view-btn, .enquire-btn {
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+}
+@media (max-width: 575.98px) {
+  .contect-getintouch {
+    padding: 20px !important;
+  }
+      .about-banner {
+        height: 350px;
+    }
+  .drow-line {
+    padding: 40px 0px;
+  }
+  .accordion-item {
+    padding: 20px;
+  }
+  p span i {
+    font-size: 20px !important;
+  }
+  .px-24 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .mtt-60 {
+    margin-top: 60px;
+  }
+  .team-image {
+    text-align: center;
+    width: 100% !important;
+    height: 100%;
+  }
+  .project-grid {
+    display: block;
+  }
+  .project-slider {
+    width: 95%;
+  }
+  .offcanvas-start {
+    padding: 30px;
+  }
+  .p-100 {
+    padding: 20px 16px;
+  }
+  .project-name {
+    margin-bottom: 25px;
+  }
+  .project-btns {
+    margin-top: 15px !important;
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .project-slider .test {
+    height: 240px;
+  }
+  .project-btns a {
+    width: 100%;
+  }
+  .small-video,
+  .big-video {
+    height: 250px;
+    margin-top: 15px;
+  }
+  .project-content {
+    padding: 20px 0px;
+  }
+  .projects h2 {
+    margin: 40px 0px 25px;
+  }
+  .g-15,
+  .g-16,
+  .g-20,
+  .g-21 {
+    gap: 10px;
+  }
+  .g-30,
+  .g-40,
+  .g-50,
+  .g-60 {
+    gap: 20px;
+  }
+  .ft-menu {
+    gap: 0 !important;
+  }
+  .ft-menu a {
+    padding: 0px 32px;
+    border-right: 2px solid #000;
+}
+  .px-100 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .my-30 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .my-50,
+  .my-60 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .mb-12,
+  .mb-15,
+  .mb-16,
+  .mb-20,
+  .mb-25,
+  .mb-30,
+  .mb-32 {
+    margin-bottom: 20px;
+  }
+  .mb-50,
+  .mb-60,
+  .mb-64 {
+    margin-bottom: 40px;
+  }
+  .p-15,
+  .p-20,
+  .p-30,
+  .p-36,
+  .p-40 {
+    padding: 12px;
+  }
+  .p-50 {
+    padding: 15px;
+  }
+  .py-30,
+  .py-33 {
+    padding: 10px 0px;
+  }
+  .pb-50 {
+    padding-bottom: 15px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .ftlogo img {
+    width: 151px;
+  }
+  .bars img {
+    width: 40px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6,
+  p {
+    font-size: 14px;
+  }
+  button {
+    font-size: 10px;
+  }
+  .buttons {
+    font-size: 12px;
+  }
+  .project-image {
+    height: 360px;
+  }
+
+  .simple-hero {
+    display: none;
+  }
+  .responsive-hero {
+    display: block;
+  }
+ 
+}
+@media (max-width: 507.98px){
+  .ft-menu a {
+    padding: 0px 24px;
+    border-right: 2px solid #000;
+}
+}
+@media (max-width:483.98px){
+  .ft-menu a {
+    padding: 0px 18px;
+    border-right: 2px solid #000;
+}
+}
+@media (max-width:429.98px){
+  .ft-menu a {
+    padding: 0px 12px;
+    border-right: 2px solid #000;
+}
+}
+@media (max-width:389.98px){
+  .ft-menu a {
+    padding: 0px 8px;
+    border-right: 2px solid #000;
+}
+}
+@media (max-width: 374.98px) {
+  .g-15,
+  .g-16,
+  .g-20,
+  .g-21,
+  .g-30,
+  .g-40,
+  .g-50,
+  .g-60 {
+    gap: 10px;
+  }
+  .py-20,
+  .py-25 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .px-20,
+  .px-24 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .px-40,
+  .px-100 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .my-30,
+  .my-50,
+  .my-60 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .mb-12,
+  .mb-15,
+  .mb-16,
+  .mb-20,
+  .mb-25,
+  .mb-30,
+  .mb-32 {
+    margin-bottom: 10px;
+  }
+  .mb-50,
+  .mb-60,
+  .mb-64 {
+    margin-bottom: 40px;
+  }
+  .p-15,
+  .p-20,
+  .p-30,
+  .p-36,
+  .p-40,
+  .p-50 {
+    padding: 10px;
+  }
+  .py-30,
+  .py-33 {
+    padding: 10px 0px;
+  }
+  .pb-50 {
+    padding-bottom: 10px;
+  }
+}
