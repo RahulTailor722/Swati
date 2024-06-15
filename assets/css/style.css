@@ -269,8 +269,26 @@ input:active {
 #collapsibleNavbar ul li {
   padding: 0px 25px;
 }
+footer .footer-list a{
+  position: relative;
+}
+footer .footer-list a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #7b1618;
+    transition: width .4s; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+footer .footer-list a:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
 
-.navbar-nav li > a:after, footer .footer-list a::after {
+.navbar-nav li > a:after{
     content: '';
     display: block;
     width: 0;
@@ -278,9 +296,9 @@ input:active {
     background: #7b1618;
     transition: width .4s;
 }
-.navbar-nav li > a:hover::after , footer .footer-list a:hover::after{
+.navbar-nav li > a:hover::after{
     width: 100%;
-    //transition: width .3s;
+    transition: width .3s;
 }
 .nav-link{
   font-size: 20px;
@@ -528,6 +546,31 @@ input:active {
 .ft-social-icon {
   padding: 10px 13px;
   border: 1px solid #000;
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.ft-social-icon::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  scale: 0;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top:0;
+  transition: all 0.5s ease-in-out;
+
+}
+.ft-social-icon:hover i{
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.ft-social-icon:hover::before{
+  scale: 1;
 }
 .project-section {
   position: relative;
@@ -540,7 +583,7 @@ input:active {
 }
 
 .sub-pro-img{
-  height: 100vh;
+  height: 90vh;
 }
 .poject-details {
   z-index: 1;
@@ -573,12 +616,15 @@ input:active {
 }
 .project-content {
   padding: 30px;
+  gap: 10px;
 }
 
 .view-btn,
 .enquire-btn {
   padding: 20px 40px;
   white-space: nowrap;
+  letter-spacing: 0.2em;
+  transition: all 0.4s ease-in-out;
 }
 .view-btn {
   border: 1px solid var(--black) !important;
@@ -795,14 +841,13 @@ a#seeMore:hover {
   margin-right: -12%;
 } */
 
-.project-slider .slick-list {
-  padding-top: 10px !important;
-  padding-bottom: 10% !important;
+.project-slider .slick-slide {
+ padding-bottom: 50px;
 }
 
 .project-slider .slick-dots {
   text-align: right;
-  position: absolute;
+  position: relative;
   bottom: 15%;
   left: 50%;
   width: fit-content;
@@ -811,10 +856,41 @@ a#seeMore:hover {
   align-items: center;
   gap: 10px;
 }
+.slick-dots li{
+  position: relative !important;
+  cursor: pointer;
+}
+button.btn.bars {
+  padding: 0;
+}
+.project-slider .slick-dots li.slick-active::before{
+  content: '';
+  position: absolute;
+  height: 9px;
+  width: 9px;
+  background: #1E1E1E;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.project-slider{
+  padding-bottom: 30px;
+}
+.project-slider .slick-dots li.slick-active{
+padding: 4px;
+background: #1E1E1E1A;
+border: 1px solid #1E1E1E;
+height: 15px;
+width: 15px;
+}
+.offices-sectiion{
+  margin: 100px 0px;
+}
 .project-slider .slick-dots li {
   height: 8px;
   width: 8px;
   background: #000;
+  position: relative;
 }
 .project-slider .slick-dots li.slick-active {
   transform: scale(1.2);
@@ -1167,4 +1243,14 @@ body {
   position: fixed;
   bottom: 0;
   background: #fff;
+}
+.modal-dialog{
+  --bs-modal-width:876px;
+}
+.modal-body h5{
+  font-size: 40px;
+  color: #1E1E1E;
+}
+div#myModal{
+  padding: 0;
 }
