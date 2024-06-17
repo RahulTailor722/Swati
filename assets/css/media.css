@@ -1,9 +1,18 @@
+
+@media(max-width:1366px){
+  .project-grid{
+    gap: 20px;
+  }
+}
 @media (max-width:1299.98px){
   .project-slider .slick-dots {
     bottom: 10%; 
   }
 }
 @media (max-width: 1199.98px) {
+  .d-lg-flex.d-md-flex.d-sm-flex.d-flex.g-21.text-center.flex-wrap.justify-content-between{
+    grid-template-columns: 1fr;
+  }
   .p-100 {
     padding: 90px;
   }
@@ -555,6 +564,7 @@
     text-align: center;
     width: 100% !important;
     height: 100%;
+    min-width: 100% !important;
   }
   .project-grid {
     display: block;
