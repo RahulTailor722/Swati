@@ -1001,6 +1001,9 @@ width: 15px;
 .contact-map {
   height: 612px;
 }
+.contact-map iframe{
+  width: 100%;
+}
 .drow-line {
   padding: 46.5px 0px;
 }
