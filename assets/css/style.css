@@ -1003,6 +1003,7 @@ width: 15px;
 }
 .contact-map iframe{
   width: 100%;
+  height: 100%;
 }
 .drow-line {
   padding: 46.5px 0px;

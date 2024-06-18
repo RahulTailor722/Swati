@@ -232,10 +232,10 @@
     object-fit: cover;
   }
   .projects{
-    top: 0;
+    top: -40px;
   }
   .project-detail-card {
-    padding-bottom: 30px;
+    padding-bottom: 60px;
 }
   .project-section{
     padding: 0 16px;
@@ -559,6 +559,38 @@
 }
 }
 @media (max-width: 575.98px) {
+  .modal-header .btn-close{
+    font-size: 20px;
+    right: 20px;
+    top: 20px;
+  }
+  .contect-getintouch.p-50 h3 {
+    margin-bottom: 20px;
+}
+  .contect-getintouch.p-50 {
+    margin-top: 60px;
+}
+  section.blog-section.blog-detail-section ul {
+    padding-left: 16px !important;
+}
+  .connect-us{
+    margin-top: 30px;
+  }
+  .w-100.border.bg-white.connect-us .p-40 {
+    padding: 30px;
+}
+  .connect-us h5{
+    font-size: 28px;
+    font-weight: 375;
+    line-height: 38px;
+  margin-bottom: 16px;    
+  }
+  section.project-section.project-listing .projects {
+    position: inherit;
+}
+  .d-lg-flex.d-md-flex.d-sm-flex.d-flex.g-21.text-center.flex-wrap.justify-content-between{
+    grid-template-columns: 1fr 1fr;
+  }
   .contect-getintouch {
     padding: 20px !important;
   }
@@ -591,7 +623,7 @@
     display: block;
   }
   .project-slider {
-    width: 95%;
+    width: calc(100% - 32px);
   }
   .offcanvas-start {
     padding: 30px;
