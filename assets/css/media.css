@@ -299,6 +299,7 @@
   }
   .accordion-header button {
     width: 100%;
+    background: transparent;
   }
   .apply-btn {
     margin-top: 30px;
