@@ -559,6 +559,9 @@
 }
 }
 @media (max-width: 575.98px) {
+  .home-project{
+    padding: 0;
+  }
   .modal-header .btn-close{
     font-size: 20px;
     right: 20px;
