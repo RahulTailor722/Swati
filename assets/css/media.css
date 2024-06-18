@@ -560,6 +560,9 @@
 }
 }
 @media (max-width: 575.98px) {
+  section.project-section.project-listing .container-fluid.p-100.pb-0{
+    padding: 0;
+  }
   .home-project{
     padding: 0;
   }
