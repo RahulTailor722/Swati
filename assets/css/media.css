@@ -223,13 +223,16 @@
 }
 
 @media (max-width: 767.98px) {
+  .blog-details {
+    padding-right: 0px;
+}
   .hero-sectio, .hero-sectio a{
     height: 100vh;
     display: block;
   }
   .hero-sectio a img{
     height: 100%;
-    object-fit: cover;-
+    object-fit: cover;
   }
   .projects{
     top: -40px;
