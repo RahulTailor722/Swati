@@ -217,7 +217,7 @@
   .about-banner {
     height: 100%;
 }
-.project-inner-details .rera-carpet{
+.projectinner-details .rera-carpet{
   width: 100%;
 }
 }
@@ -229,7 +229,7 @@
   }
   .hero-sectio a img{
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;-
   }
   .projects{
     top: -40px;
@@ -560,6 +560,12 @@
 }
 }
 @media (max-width: 575.98px) {
+ .three-title{
+  padding-top: 0  !important;
+ }
+  section.project-section.project-listing .poject-details{
+    margin-bottom: 40px;
+  }
   section.project-section.project-listing .container-fluid.p-100.pb-0{
     padding: 0;
   }
