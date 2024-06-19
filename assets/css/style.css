@@ -25,6 +25,7 @@
   --white: #fff;
   --whitebg: #fff;
   --bg-lblack: #2e2f2f;
+  --bs-border-width:0px !important;
 }
 h1 {
   font-size: 72px;
