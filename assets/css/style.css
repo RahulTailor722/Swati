@@ -1316,3 +1316,12 @@ body {
 div#myModal{
   padding: 0;
 }
+.desktop{
+  display: block;
+}
+.mobile{
+  display: none;
+}
+.connect-us{
+  border: 1px solid #1E1E1E4D !important;
+}

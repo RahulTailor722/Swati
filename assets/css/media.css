@@ -235,7 +235,8 @@
     object-fit: cover;
   }
   .projects{
-    top: -40px;
+    /* top: -40px; */
+    top: 0px;
   }
   .project-detail-card {
     padding-bottom: 60px;
@@ -261,7 +262,7 @@
     row-gap: 20px !important;
   }
   .sub-pro-img {
-    height: 80vh;
+    height: 60vh;
 }
   .section-space{
     margin: 40px 0px;
@@ -540,6 +541,7 @@
   }
   .project-sub-image .project-content {
   padding: 10px 0px;
+  position: inherit
   }
    .p-00 {
     padding: 0 !important;
@@ -563,6 +565,16 @@
 }
 }
 @media (max-width: 575.98px) {
+  .sub-pro-img img{
+    object-fit: cover;
+    object-position: center;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
  .three-title{
   padding-top: 0  !important;
  }
