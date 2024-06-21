@@ -61,6 +61,7 @@
                             src="./assets/images/Swati_Senor_hero_banner_1240x600_low.mp4" class="video-bg active"
                             muted="" autoplay="" loop="">
                         </video>
+
                         <!-- <button class="play-button"
                                 onclick="playPause('video1')"></button>
 
@@ -505,6 +506,11 @@
 
             }
         }
+    </script>
+    <script>
+        document.querySelector('video').play().catch(error => {
+            console.log('Autoplay error:', error);
+        });
     </script>
 </body>
 
