@@ -1325,3 +1325,25 @@ div#myModal{
 .connect-us{
   border: 1px solid #1E1E1E4D !important;
 }
+.about-heading{
+  position: inherit;
+}
+.thumbnail-main{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  cursor: pointer;
+}
+.slick-current .thumbnail-main {
+  background: #1E1E1E1A;
+}
+.nav-slider-main h3{
+  margin-top: 100px;
+  font-size: 32px;
+  font-weight: 325;
+  line-height: 42px;
+  text-align: left;
+  margin-bottom: 60px;  
+  color: #1E1E1E;
+}

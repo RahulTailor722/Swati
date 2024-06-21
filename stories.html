@@ -1,184 +1,652 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet">
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
-        <link type="text/css" rel="stylesheet" href="./assets/css/media.css" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="./assets/css/media.css" />
 
-        <link rel="shortcut icon" href="assets/images/favicon.png"
-            type="image/x-icon">
-    </head>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
-    <body>
 
-        <header class="activepage" id="header"></header>
-        <div class="container-fluid px-100 py-20 back-option">
-            <a href="index.html" class="back">
-                <img src="./assets/images/arrow.png" class="img-fluid" alt />
-                <h4>Back</h4>
-            </a>
+    <style>
+        /*USE CSS for Slider*/
+
+        .vehicle-detail-banner .car-slider-desc {
+            max-width: 180px;
+            margin: 0 auto;
+        }
+
+        .banner-slider .slider.slider-for {
+            max-width: 46%;
+        }
+
+        .banner-slider .slider.slider-nav {
+            max-width: 50%;
+            padding-right: 50px;
+            position: relative;
+            margin-right: 50px;
+        }
+
+        .banner-slider .slider.slider-nav::after {
+            top: 0;
+        }
+
+        .banner-slider .slider.slider-nav::after,
+        .banner-slider .slider.slider-nav::before {
+            content: '';
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 237.14%);
+            Height: 100px;
+            width: 100%;
+            position: absolute;
+            z-index: 11;
+        }
+
+        .banner-slider .slider.slider-nav::before {
+            bottom: 0;
+        }
+
+        .banner-slider .slider.slider-for,
+        .banner-slider .slider.slider-nav {
+            width: 100%;
+            float: left;
+        }
+
+        .banner-slider .slider.slider-nav {
+            height: 500px;
+            overflow: hidden;
+
+        }
+
+        .slider-banner-image {
+            height: 500px;
+        }
+
+        .banner-slider .slider.slider-nav {
+            padding: 20px 0 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-nav .slick-slide.thumbnail-image .thumbImg {
+            max-width: 178px;
+            height: 110px;
+            margin: 0 auto;
+            border: 1px solid #EBEBEB;
+        }
+
+        .slider-banner-image img,
+        .slider-nav .slick-slide.thumbnail-image .thumbImg img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .slick-vertical .slick-slide:active,
+        .slick-vertical .slick-slide:focus,
+        .slick-arrow:hover,
+        .slick-arrow:focus {
+            border: 0;
+            outline: 0;
+        }
+
+        .slider-nav .slick-slide.slick-current.thumbnail-image .thumbImg {
+            border: 2px solid #196DB6;
+        }
+
+        .slider-nav .slick-slide.slick-current span {
+            color: #196DB6;
+        }
+
+        .slider-nav .slick-slide {
+            text-align: center;
+        }
+
+        .slider-nav .slick-slide span {
+            font-size: 14px;
+            display: block;
+            padding: 5px 0 15px;
+        }
+
+        .slick-arrow {
+            width: 100%;
+            background-color: transparent;
+            border: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 0;
+            height: 18px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        .slick-prev {
+            top: 0;
+        }
+
+        .slick-next {
+            bottom: 0;
+            background-color: #fff;
+        }
+
+        .slick-prev.slick-arrow {
+            background-image: url(../images/black-up-arrow.png);
+        }
+
+        .slick-next.slick-arrow {
+            background-image: url(../images/black-down-arrow.png);
+        }
+
+        /*End USE CSS for Slider*/
+
+        @media screen and (max-width : 991px) {
+
+            .banner-slider .slider.slider-for,
+            .banner-slider .slider.slider-nav {
+                max-width: 100%;
+                float: none;
+            }
+
+            .banner-slider .slider.slider-for {
+                padding-right: 0;
+            }
+
+            .banner-slider .slider.slider-nav {
+                height: auto;
+            }
+
+            .slider-banner-image {
+                height: 500px;
+            }
+
+            .slider.slider-nav.thumb-image {
+                padding: 10px 30px 0;
+            }
+
+            .slider-nav .slick-slide span {
+                padding: 5px 0;
+            }
+
+            .slick-arrow {
+                padding: 0;
+                width: 30px;
+                height: 30px;
+                top: 50%;
+                bottom: 0;
+                -webkit-transform: translateY(-50%) rotate(-90deg);
+                -moz-transform: translateY(-50%) rotate(-90deg);
+                -ms-transform: translateY(-50%) rotate(-90deg);
+                transform: translateY(-50%) rotate(-90deg);
+            }
+
+            .slick-prev {
+                left: 0;
+                right: unset;
+            }
+
+            .slick-next {
+                left: unset;
+                right: 0;
+                background-color: transparent;
+            }
+
+            .vehicle-detail-banner .car-slider-desc {
+                max-width: 340px;
+            }
+
+            .bid-tag {
+                padding: 10px 0 15px;
+            }
+
+            .slider.slider-nav.thumb-image {
+                white-space: nowrap;
+            }
+
+            .thumbnail-image.slick-slide {
+                padding: 0px 5px;
+                min-width: 75px;
+                display: inline-block;
+                float: none;
+            }
+        }
+
+        @media screen and (max-width : 767px) {
+            .slider-banner-image {
+                height: 400px;
+            }
+
+            .slider.slider-nav.thumb-image {
+                padding: 0px 20px 0;
+                margin: 10px 0px 0;
+            }
+
+            .slider-nav .slick-slide.thumbnail-image .thumbImg {
+                max-width: 140px;
+                height: 80px;
+            }
+
+            .slick-prev.slick-arrow {
+                background-position: center 10px;
+            }
+
+            .slick-next.slick-arrow {
+                background-position: center 10px, center;
+            }
+
+            .slider-nav .slick-slide span {
+                font-size: 12px;
+                white-space: normal;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+            .slider-banner-image {
+                height: 340px;
+            }
+        }
+
+        @media screen and (max-width : 480px) {
+            .slider-banner-image {
+                height: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="activepage" id="header"></header>
+    <div class="container-fluid px-100 py-20 back-option">
+        <a href="index.html" class="back">
+            <img src="./assets/images/arrow.png" class="img-fluid" alt />
+            <h4>Back</h4>
+        </a>
+    </div>
+    <section class="borders">
+        <div class="center-line">
+
         </div>
-        <section class="borders">
-            <div class="center-line">
+    </section>
+    <section class="blog-section ">
+
+        <div class="container-fluid p-100 pb-0">
+            <div class="mb-30">
+                <h2 class>A Vision of Building Tommrow</h2>
+            </div>
+            <div class="d-ld-flex d-md-flex d-sm-block d-block g-30">
+                <p>As we work towards our goals, we don’t miss out on
+                    celebrating the little moments of life. Here is a
+                    glimpse of all the stories that happen at Swati.</p>
 
             </div>
-        </section>
-        <section class="blog-section">
-            <div class="container-fluid p-100 pb-0">
-                <div class="mb-30">
-                    <h2 class>A Vision of Building Tommrow</h2>
+
+            <section class="banner-section nav-slider-main">
+                <h3>Chrysantha</h3>
+                <div class="vehicle-detail-banner banner-content clearfix">
+                    <div class="banner-slider">
+                        <div class="slider slider-nav thumb-image">
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="thumbnail-image">
+                                <div class="thumbnail-main">
+                                    <div class="thumbnail-title">
+                                        <svg width="44" height="45" viewBox="0 0 44 45" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30.5938 20.7812C31.1953 21.125 31.625 21.8125 31.625 22.5C31.625 23.2734 31.1953 23.9609 30.5938 24.3047L18.2188 31.8672C17.6172 32.2109 16.7578 32.2969 16.1562 31.8672C15.4688 31.5234 15.125 30.8359 15.125 30.0625V14.9375C15.125 14.25 15.4688 13.5625 16.1562 13.2188C16.7578 12.7891 17.6172 12.7891 18.2188 13.2188L30.5938 20.7812ZM17.875 16.2266V28.8594L28.1875 22.5L17.875 16.2266ZM0 22.5C0 10.3828 9.79688 0.5 22 0.5C34.1172 0.5 44 10.3828 44 22.5C44 34.7031 34.1172 44.5 22 44.5C9.79688 44.5 0 34.7031 0 22.5ZM22 41.75C32.5703 41.75 41.25 33.1562 41.25 22.5C41.25 11.9297 32.5703 3.25 22 3.25C11.3438 3.25 2.75 11.9297 2.75 22.5C2.75 33.1562 11.3438 41.75 22 41.75Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+                                        Library
+                                    </div>
+                                    <div class="thumbnail-arrow">
+                                        <svg width="44" height="29" viewBox="0 0 44 29" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M31.1953 1.17969L43.5703 13.5547C43.8281 13.8125 44 14.1562 44 14.5C44 14.7578 43.8281 15.1875 43.5703 15.4453L31.1953 27.8203C30.6797 28.3359 29.7344 28.3359 29.2188 27.8203C28.7031 27.3047 28.7031 26.4453 29.2188 25.8438L39.2734 15.875H1.375C0.601562 15.875 0 15.1875 0 14.5C0 13.8125 0.601562 13.125 1.375 13.125H39.2734L29.2188 3.15625C28.7031 2.64062 28.7031 1.69531 29.2188 1.17969C29.7344 0.664062 30.6797 0.664062 31.1953 1.17969Z"
+                                                fill="#1E1E1E" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="slider slider-for">
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1570942872213-1242607a35eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1570171278960-d6c2b316f3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1564376130023-5360fbb7c91b?ixlib=rb-1.2.1&auto=format&fit=crop&w=724&q=80"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1570942872213-1242607a35eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1570171278960-d6c2b316f3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1564376130023-5360fbb7c91b?ixlib=rb-1.2.1&auto=format&fit=crop&w=724&q=80"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1570942872213-1242607a35eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1570171278960-d6c2b316f3b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+                                    alt="Car-Image">
+                            </div>
+                            <div class="slider-banner-image">
+                                <img src="https://images.unsplash.com/photo-1564376130023-5360fbb7c91b?ixlib=rb-1.2.1&auto=format&fit=crop&w=724&q=80"
+                                    alt="Car-Image">
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="d-ld-flex d-md-flex d-sm-block d-block g-30">
-                    <p>As we work towards our goals, we don’t miss out on
-                        celebrating the little moments of life. Here is a
-                        glimpse of all the stories that happen at Swati.</p>
+            </section>
+
+
+
+
+        </div>
+
+
+    </section>
+
+    <section class>
+        <div class="container-fluid slick-slider-demo story-slider p-100 pt-0 mt-60">
+            <div class="slider2 story-slide">
+                <div class="slider-item story-item">
+                    <div class="video-container">
+                        <div class="video-wrapper small-video">
+                            <video id="video1" controls>
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- <button class="play-button "
+                                    onclick="playPause('video1')"></button>
+
+                                <div class="triangle"></div> -->
+                        </div>
+                    </div>
+                    <div class="p-40 text-start story-item-title">
+                        <h4>Mr & Mrs. Yadav</h4>
+                        <h6>THE YADAV’S</h6>
+                    </div>
+                </div>
+                <div class="slider-item story-item">
+                    <div class="video-container">
+                        <div class="video-wrapper small-video">
+                            <video id="video1" controls>
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- <button class="play-button "
+                                    onclick="playPause('video1')"></button>
+
+                                <div class="triangle"></div> -->
+                        </div>
+                    </div>
+                    <div class="p-40 text-start story-item-title">
+                        <h4>Mr & Mrs. Bhojwani</h4>
+                        <h6>THE BHOJWANI’S</h6>
+                    </div>
+                </div>
+                <div class="slider-item story-item">
+                    <div class="video-container">
+                        <div class="video-wrapper small-video">
+                            <video id="video1" controls>
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- <button class="play-button "
+                                    onclick="playPause('video1')"></button>
+
+                                <div class="triangle"></div> -->
+                        </div>
+                    </div>
+                    <div class="p-40 text-start story-item-title">
+                        <h4>Mr & Mrs. Yadav</h4>
+                        <h6>THE YADAV’S</h6>
+                    </div>
+                </div>
+                <div class="slider-item story-item">
+                    <div class="video-container">
+                        <div class="video-wrapper small-video">
+                            <video id="video1" controls>
+                                <source
+                                    src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
+                                    type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!-- <button class="play-button "
+                                    onclick="playPause('video1')"></button>
+
+                                <div class="triangle"></div> -->
+                        </div>
+                    </div>
+                    <div class="p-40 text-start story-item-title">
+                        <h4>Mr & Mrs. Bhojwani</h4>
+                        <h6>THE BHOJWANI’S</h6>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <footer id="footer" class=" ">
 
-        <section class>
-            <div
-                class="container-fluid slick-slider-demo story-slider p-100 pt-0 mt-60">
-                <div class="slider2 story-slide">
-                    <div class="slider-item story-item">
-                        <div
-                            class="video-container">
-                            <div class="video-wrapper small-video">
-                                <video id="video1" controls>
-                                    <source
-                                        src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <!-- <button class="play-button "
-                                    onclick="playPause('video1')"></button>
-
-                                <div class="triangle"></div> -->
-                            </div>
-                        </div>
-                        <div class="p-40 text-start story-item-title">
-                            <h4>Mr & Mrs. Yadav</h4>
-                            <h6>THE YADAV’S</h6>
-                        </div>
-                    </div>
-                    <div class="slider-item story-item">
-                        <div
-                            class="video-container">
-                            <div class="video-wrapper small-video">
-                                <video id="video1" controls>
-                                    <source
-                                        src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <!-- <button class="play-button "
-                                    onclick="playPause('video1')"></button>
-
-                                <div class="triangle"></div> -->
-                            </div>
-                        </div>
-                        <div class="p-40 text-start story-item-title">
-                            <h4>Mr & Mrs. Bhojwani</h4>
-                            <h6>THE BHOJWANI’S</h6>
-                        </div>
-                    </div>
-                    <div class="slider-item story-item">
-                        <div
-                            class="video-container">
-                            <div class="video-wrapper small-video">
-                                <video id="video1" controls>
-                                    <source
-                                        src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <!-- <button class="play-button "
-                                    onclick="playPause('video1')"></button>
-
-                                <div class="triangle"></div> -->
-                            </div>
-                        </div>
-                        <div class="p-40 text-start story-item-title">
-                            <h4>Mr & Mrs. Yadav</h4>
-                            <h6>THE YADAV’S</h6>
-                        </div>
-                    </div>
-                    <div class="slider-item story-item">
-                        <div
-                            class="video-container">
-                            <div class="video-wrapper small-video">
-                                <video id="video1" controls>
-                                    <source
-                                        src="https://assets.mixkit.co/videos/preview/mixkit-flying-through-the-clouds-with-the-radiant-sun-14171-large.mp4"
-                                        type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
-                                <!-- <button class="play-button "
-                                    onclick="playPause('video1')"></button>
-
-                                <div class="triangle"></div> -->
-                            </div>
-                        </div>
-                        <div class="p-40 text-start story-item-title">
-                            <h4>Mr & Mrs. Bhojwani</h4>
-                            <h6>THE BHOJWANI’S</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer id="footer" class=" ">
-
-        </footer>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!-- common header footer -->
-        <script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- common header footer -->
+    <script>
         $(function () {
             $("#header").load("./include/header.html");
             $("#footer").load("./include/footer.html");
         });
     </script>
 
-        <script>
+    <script>
         $(".navbar-toggler").click(function () {
             $("body").toggleClass("overflow-hidden");
         })
     </script>
 
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <!-- font awsome -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- jquery -->
+    <!-- jquery -->
 
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <!-- slick slider -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <script>
+
+    <script>
         $(document).ready(function () {
 
             $('.slider2').slick({
@@ -214,20 +682,68 @@
         });
     </script>
 
-        <script>
-  function playPause(videoId) {
-    var video = document.getElementById(videoId);
-    if (video.paused) {
-      video.play();
-      document.getElementByClass(play-button).style.display = "none";
+    <script>
+        function playPause(videoId) {
+            var video = document.getElementById(videoId);
+            if (video.paused) {
+                video.play();
+                document.getElementByClass(play - button).style.display = "none";
 
-    } else {
-      video.pause();
-      document.getElementByClass(play-button).style.display = "block";
+            } else {
+                video.pause();
+                document.getElementByClass(play - button).style.display = "block";
 
-    }
-  }
-</script>
-    </body>
+            }
+        }
+    </script>
+    <script>
+
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            centerMode: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            vertical: true,
+            asNavFor: '.slider-for',
+
+            focusOnSelect: true,
+            verticalSwiping: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        vertical: false,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        vertical: false,
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        vertical: false,
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 380,
+                    settings: {
+                        vertical: false,
+                        slidesToShow: 2,
+                    }
+                }
+            ]
+        });
+    </script>
+</body>
 
 </html>
