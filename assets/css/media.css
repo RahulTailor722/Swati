@@ -223,6 +223,9 @@
 }
 
 @media (max-width: 767.98px) {
+  footer .container-fluid {
+    padding-bottom: 0;
+}
   .blog-section .projects{
     position: inherit;
   }
