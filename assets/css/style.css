@@ -313,6 +313,7 @@ footer .container-fluid{
 /* header */
 #navbar {
   background: #fff;
+  z-index: 9;
 }
 .navbar-toggler:focus,
 .navbar-toggler:hover {
@@ -592,7 +593,7 @@ footer .container-fluid{
   height: 100vh;
 }
 .project-detail-card{
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 
 .poject-details {
@@ -902,7 +903,7 @@ a#seeMore:hover {
 button.btn.bars {
   padding: 0;
 }
-.project-slider .slick-dots li.slick-active::before{
+.slick-dots li.slick-active::before{
   content: '';
   position: absolute;
   height: 9px;
@@ -915,7 +916,7 @@ button.btn.bars {
 .project-slider{
   padding-bottom: 30px;
 }
-.project-slider .slick-dots li.slick-active{
+.slick-dots li.slick-active{
 padding: 4px;
 background: #1E1E1E1A;
 border: 1px solid #1E1E1E;
@@ -931,7 +932,7 @@ width: 15px;
   background: #000;
   position: relative;
 }
-.project-slider .slick-dots li.slick-active {
+.slick-dots li.slick-active {
   transform: scale(1.2);
 }
 .project-slider .slick-track {
@@ -1173,6 +1174,7 @@ section#counter-stats {
   margin: auto;
   overflow: hidden;
   position: relative;
+  padding-bottom: 20px;
 }
 
 .story-slider .slick-dots {
@@ -1181,6 +1183,7 @@ section#counter-stats {
   margin: 30px auto 0px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .story-slider .slick-dots li {
@@ -1189,7 +1192,10 @@ section#counter-stats {
   margin: 0 5px;
   text-align: center;
 }
-
+li.slick-active button {
+  background: none !important;
+  border: none !important;
+}
 .story-slider .slick-dots li button {
   height: 10px;
   width: 10px;
@@ -1346,4 +1352,128 @@ div#myModal{
   text-align: left;
   margin-bottom: 60px;  
   color: #1E1E1E;
+}
+.thumbnail-image.slick-slide.slick-active .thumbnail-arrow, .thumbnail-image.slick-slide.thumbnail-arrow{
+  opacity: 0;
+}
+.thumbnail-image.slick-slide.slick-current.slick-active .thumbnail-arrow{
+  opacity: 1;
+}
+.thumbnail-title {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 20px;
+}
+.thumbnail-image.slick-slide.slick-current.slick-active  .thumbnail-title{
+  font-size: 24px;
+}
+.thumbnail-image.slick-slide.slick-current.slick-active  .thumbnail-title svg{
+  height: 50px;
+  width:50px;
+}
+.thumbnail-image.slick-slide  .thumbnail-title svg{
+  height: 30px;
+  width:30px;
+}
+.thumbnail-image.slick-slide .thumbnail-main{
+  margin-left: 40px;
+}
+.thumbnail-image.slick-slide.slick-current.slick-active .thumbnail-main{
+  margin-left: 0px;
+}
+.slider-banner-image video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-text-wrapper{
+  display: none;
+}
+.banner-slider ul.slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 25px;
+}
+.banner-slider{
+  padding-bottom: 40px;
+}
+.banner-slider ul.slick-dots button{
+  height: 10px;
+  width: 10px;
+  border-radius: 0%;
+  background: #000;
+  font-size: 0;
+}
+.banner-slider ul.slick-dots LI{
+  display: flex;
+  align-items: center;
+}
+.banner-slider ul.slick-dots li.slick-active{
+  padding: 8px;
+}
+.sticky-contact {
+  position: fixed;
+  top: 355px;
+  
+  background: black;
+  width: 60px;
+  z-index: 9;
+  padding: 20px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.call-now {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+  gap: 20px;
+}
+.call-now a{
+  color: white;
+}
+section.hero-sectio {
+  z-index: -1;
+  position: relative;
+}
+.cross-btn {
+  position: absolute;
+  top: -25px;
+  right: -24px;
+  z-index: 99;
+  cursor: pointer;
+}
+.sticky-contact .inner-sticky {
+ display: none;
+}
+.sticky-contact.active .inner-sticky {
+  display: block;
+}
+.sticky-contact p{
+  font-family: 'General Sans';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.3em;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+.sticky-contact p:last-child{
+  margin-bottom: 0;
+}
+.sticky-contact.active{
+  width: 300px;
+}
+.sticky-contact.active > p{
+  display: none;
+}
+.sticky-contact-inner p {
+  margin-bottom: 3px;
 }
