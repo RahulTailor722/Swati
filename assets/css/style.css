@@ -1462,12 +1462,9 @@ section.hero-sectio {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  margin-bottom: 20px;
+  align-items: center;
 }
-.sticky-contact p:last-child{
-  margin-bottom: 0;
-}
+
 .sticky-contact.active{
   width: 300px;
 }
@@ -1476,4 +1473,7 @@ section.hero-sectio {
 }
 .sticky-contact-inner p {
   margin-bottom: 3px;
+}
+.banner-slider{
+  display: flex;
 }
